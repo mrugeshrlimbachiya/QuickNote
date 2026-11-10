@@ -482,5 +482,3 @@ correctly emits `<script type="module" crossorigin src="assets/popup.js">`.
 ---
 
 *Built with ❤️ using React 18 + Vite 5 + TailwindCSS 3 + Manifest V3*
-#   Q u i c k N o t e  
- 
