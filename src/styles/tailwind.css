@@ -1,0 +1,4 @@
+/* styles/tailwind.css – imported by popup/main.tsx */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

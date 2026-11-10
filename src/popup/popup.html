@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickNote</title>
+    <!--
+      NO external CDN links anywhere in this file.
+      All CSS and JS are bundled by Vite at build time and served locally.
+      Chrome Web Store Policy: zero remotely hosted code.
+    -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      Vite replaces this module script with the compiled bundle path
+      during the build. The resulting popup.html in dist/ will contain:
+        <script type="module" crossorigin src="assets/popup.js"></script>
+      which is a local path – perfectly fine for Chrome extensions.
+    -->
+    <script type="module" src="/src/popup/main.tsx"></script>
+  </body>
+</html>

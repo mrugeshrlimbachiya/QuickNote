@@ -1,0 +1,48 @@
+/*
+ * styles/shadow.css
+ *
+ * This file is imported with Vite's `?inline` modifier inside content.tsx:
+ *
+ *   import shadowStyles from '../styles/shadow.css?inline'
+ *
+ * Vite / PostCSS runs Tailwind on this file at build time, tree-shakes
+ * unused utility classes, and embeds the resulting CSS as a JavaScript
+ * string literal in the bundle.  No separate network request is ever made.
+ *
+ * The string is then injected into a <style> element inside the Shadow DOM,
+ * so Tailwind styles are completely isolated from the host page's CSS.
+ *
+ * We import @tailwind preflight (base) here too so that our component
+ * has consistent default element styles without leaking into the page.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animation keyframes for the floating panel */
+@layer utilities {
+  @keyframes qn-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes qn-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .qn-animate-in {
+    animation: qn-slide-in 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  .qn-fade-in {
+    animation: qn-fade-in 0.15s ease-out both;
+  }
+}
